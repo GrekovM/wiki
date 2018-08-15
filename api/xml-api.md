@@ -14,7 +14,6 @@ https://$AG_NAME.ag.$INSTANCE_DOMAIN/2.01/xml?
   ag_verbose=$agVerbose&
   ag_service_key=$agServiceKey
 ```
-
 **где: **
 * **AGNAME** в имени домена: уникальное имя оператора на платформе Velvica.
 * **INSTANCEDOMAIN**: доменное имя сервера Velvica.
