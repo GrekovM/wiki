@@ -31,7 +31,7 @@ https://$AG_NAME.ag.$INSTANCE_DOMAIN/2.01/xml?
 <root>
     <code>OK</code>
     <message>Операция выполнена успешно.</message>
-    <debug>Отладочная информация (можно писать в лог-файл; пользователю не показывается).</debug>
+    <debug>***Отладочная информация (можно писать в лог-файл; пользователю не показывается).***</debug>
     <response>
         <item key="...">
             <service_key>dr_web_classic</service_key>
@@ -147,13 +147,13 @@ https://$AG_NAME?provider=rentsoft&person_type=natural&login_source=http%3A%2F%2
                 ...
             </history>
 
-            <debug>
+***            <debug>
                 <item key="...">
-                    <subscription_id>...</subscription_id>
-                    <subscription_status>...</subscription_status>
-                    <subscription_status_next>...</subscription_status_next>
+                    <subscriptionid>...</subscriptionid>
+                    <subscriptionstatus>...</subscriptionstatus>
+                    <subscriptionstatusnext>...</subscriptionstatusnext>
                 </item>
-            </debug>
+            </debug>*
         </item>
         ...
     </response>
