@@ -1,4 +1,4 @@
-<!-- TITLE: Terms -->
-<!-- SUBTITLE: A quick summary of Terms -->
+<!-- TITLE: Термины и определения -->
+<!-- SUBTITLE:  -->
 
 # Header
