@@ -31,7 +31,7 @@ https://$AG_NAME.ag.$INSTANCE_DOMAIN/2.01/xml?
 <root>
     <code>OK</code>
     <message>Операция выполнена успешно.</message>
-    <debug>***Отладочная информация (можно писать в лог-файл; пользователю не показывается).***</debug>
+    <debug>Отладочная информация (можно писать в лог-файл; пользователю не показывается).</debug>
     <response>
         <item key="...">
             <service_key>dr_web_classic</service_key>
@@ -95,7 +95,9 @@ https://$AG_NAME?provider=rentsoft&person_type=natural&login_source=http%3A%2F%2
              
             <!-- Условия подключения. -->
             <verbose_subscription_conditions key="verbose_subscription_conditions">
-<p>Вы подключаете «Advanced SystemCare Pro» <span class="nowrap">за 300 тенге/мес</span>. </p><p class="cost_block">После подключения с Вашего счета будет списано <strong class="nowrap">300 тенге</strong>. Затем Вы получите доступ к установочному файлу, и подписка станет активной.</p>
+<p>Вы подключаете «Advanced SystemCare Pro» <span class="nowrap">за 300 тенге/мес</span>. </p>
+<p class="cost_block">После подключения с Вашего счета будет списано <strong class="nowrap">300 тенге</strong>. 
+Затем Вы получите доступ к установочному файлу, и подписка станет активной.</p>
             </verbose_subscription_conditions>
 
             <!-- Если услуга еще не подключена, то блок subscription отсутствует. -->
@@ -147,13 +149,13 @@ https://$AG_NAME?provider=rentsoft&person_type=natural&login_source=http%3A%2F%2
                 ...
             </history>
 
-***            <debug>
+            <debug>
                 <item key="...">
                     <subscriptionid>...</subscriptionid>
                     <subscriptionstatus>...</subscriptionstatus>
                     <subscriptionstatusnext>...</subscriptionstatusnext>
                 </item>
-            </debug>*
+            </debug>
         </item>
         ...
     </response>
@@ -161,6 +163,6 @@ https://$AG_NAME?provider=rentsoft&person_type=natural&login_source=http%3A%2F%2
 ```
 
 > Замечание 1: кодировка всех текстов в каждом элементе – стандартный XML-эскейпинг (т.е. "<" превращается в &gt;, ">" – в &lt;, "&" – в &amp; и т.д. – при обратном преобразовании XML-парсер на стороне оператора преобразует эти последовательности обратно в символы, это стандратное для XML поведение). Секция CDATA не применяется. Пример можно видеть, например, в элементе `<activation_details>` ниже.
-> Замечание 2: все элементы, имена которых начинается с префикса `"debug"`, а также атрибуты `"key"` элементов `<item>` следует игнорировать. Они предназначены для отладки (довольно удобно будет видеть их в логах) и не участвуют в бизнес-логике. В примере такие элементы обозначены синим цветом.
+> Замечание 2: все элементы, имена которых начинается с префикса `"debug"`, а также атрибуты `"key"` элементов `<item>` следует игнорировать. Они предназначены для отладки (довольно удобно будет видеть их в логах) и не участвуют в бизнес-логике. 
 
  
