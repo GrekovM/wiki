@@ -24,6 +24,6 @@
 Другие контуры
 API и интеграция
 Vendor API
-[XML API](api/xml-api)XML API
+[XML API](api/xml-api)
 Iframe интеграция
 Техническая документация - https://github.com/rentsoft/rs/tree/master/docs/guides отсюда, с доступом только для Велвики.
