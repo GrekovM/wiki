@@ -119,9 +119,10 @@ error2=USER_UNKNOWN_UUID
 ...
 ```
 
-ВАЖНО: убедиться, что в методе canCharge() возвращается статус ответа OK в случае, если charge() с таким txid уже ранее запрашивался и списание на стороне провайдера было реально произведено (т.е. оператору необходимо хранить у себя все произведенные когда-либо операции charge. См. метод charge() и код ответа: USER_DUPLICATE_TXID).
-ВАЖНО: canCharge() может принимать отрицательное значение в случае, если производится возврат средств пользователю на его счет.
-* Реализовать метод charge(): списание средств. На вход: массив структур (uuid, txid, amount, comment, periodEnd, serviceKey, serviceName, baseCost, subId) – описание полей см. в конце документа. На выход: массив структур (txid, error). Коды ответов: OK, USER_DUPLICATE_TXID, USER_UNKNOWN_UUID, USER_NO_MONEY. Здесь и далее кодировка текста – UTF-8.
+> ВАЖНО: убедиться, что в методе canCharge() возвращается статус ответа OK в случае, если charge() с таким txid уже ранее запрашивался и списание на стороне провайдера было реально произведено (т.е. оператору необходимо хранить у себя все произведенные когда-либо операции charge. См. метод charge() и код ответа: USER_DUPLICATE_TXID).{.is-warning}
+> ВАЖНО: canCharge() может принимать отрицательное значение в случае, если производится возврат средств пользователю на его счет.{.is-warning}
+## * Реализовать метод charge(): списание средств. 
+На вход: массив структур (uuid, txid, amount, comment, periodEnd, serviceKey, serviceName, baseCost, subId) – описание полей см. в конце документа. На выход: массив структур (txid, error). Коды ответов: OK, USER_DUPLICATE_TXID, USER_UNKNOWN_UUID, USER_NO_MONEY. Здесь и далее кодировка текста – UTF-8.
 POST /podpiska/generic/api/?method=charge&apikey=4ktr832yur7  HTTP/1.1
 Content-Length: ...
 uuid0=163&txid0=e82a&amount0=59&comment0=...&periodEnd0=2010-02-01&serviceKey0=drweb&serviceName0=Dr.Web Классик&baseCost0=100&subId0=131343&
